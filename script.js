@@ -1,7 +1,7 @@
 const cell = document.querySelector('.cell');
-const player1ScoreSpan = document.querySelector('player1Score');
-const player2ScoreSpan = document.querySelector('player2Score');
-const restartBtn = document.querySelector('restart');
+const player1ScoreSpan = document.querySelector('.player1Score');
+const player2ScoreSpan = document.querySelector('.player2Score');
+const restartBtn = document.querySelector('.restart');
 
 const winCombination = [
     [0, 1, 2],
@@ -26,7 +26,7 @@ let flag = true;
 
 for(let i = 0; i < cell.length; i++) {
     cell[i].addEventListener('click', () => {
-        if(flag === true) {
+        if(flag == true) {
             addCellsPlayer1(i);
         } else {
             addCellsPlayer2(i);
@@ -35,13 +35,13 @@ for(let i = 0; i < cell.length; i++) {
     });
 }
 
-function addcellsPlayer1(i) {
+function addCellsPlayer1(i) {
     cell[i].innerHTML = "X";
     player1.push(i);
     flag = false;
 }
 
-function addcellsPlayer2(i) {
+function addCellsPlayer2(i) {
     cell[i].innerHTML = "O";
     player2.push(i);
     flag = true;
